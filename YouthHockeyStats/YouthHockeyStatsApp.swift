@@ -11,7 +11,7 @@ import SwiftUI
 struct YouthHockeyStatsApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView()
+            CreateGoalieView()
         }
     }
 }

@@ -12,6 +12,8 @@
 		CF0251B62A997F7B00DB8F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0251B52A997F7B00DB8F9E /* Assets.xcassets */; };
 		CF0251B92A997F7B00DB8F9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0251B82A997F7B00DB8F9E /* Preview Assets.xcassets */; };
 		CF23573A2A9A8FC1005256C2 /* CreateGoalieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2357392A9A8FC1005256C2 /* CreateGoalieView.swift */; };
+		CF5CA7052AA0A90A00283E29 /* GoalieModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7032AA0A90A00283E29 /* GoalieModel.xcdatamodeld */; };
+		CF5CA7072AA0AA3B00283E29 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7062AA0AA3B00283E29 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		CF0251B52A997F7B00DB8F9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF0251B82A997F7B00DB8F9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF2357392A9A8FC1005256C2 /* CreateGoalieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalieView.swift; sourceTree = "<group>"; };
+		CF5CA7042AA0A90A00283E29 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CF5CA7062AA0AA3B00283E29 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 				CF0251C02A997FC300DB8F9E /* ViewModels */,
 				CF0251C12A997FD100DB8F9E /* Models */,
 				CF0251C22A997FF800DB8F9E /* Services */,
-				CF0251C32A99800800DB8F9E /* Data */,
+				CF0251C32A99800800DB8F9E /* DataModel */,
 				CF0251B52A997F7B00DB8F9E /* Assets.xcassets */,
 				CF0251B72A997F7B00DB8F9E /* Preview Content */,
 			);
@@ -103,11 +107,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CF0251C32A99800800DB8F9E /* Data */ = {
+		CF0251C32A99800800DB8F9E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				CF5CA7032AA0A90A00283E29 /* GoalieModel.xcdatamodeld */,
+				CF5CA7062AA0AA3B00283E29 /* DataController.swift */,
 			);
-			path = Data;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5CA7072AA0AA3B00283E29 /* DataController.swift in Sources */,
 				CF0251B42A997F7A00DB8F9E /* GameView.swift in Sources */,
 				CF0251B22A997F7A00DB8F9E /* YouthHockeyStatsApp.swift in Sources */,
 				CF23573A2A9A8FC1005256C2 /* CreateGoalieView.swift in Sources */,
+				CF5CA7052AA0A90A00283E29 /* GoalieModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF5CA7032AA0A90A00283E29 /* GoalieModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF5CA7042AA0A90A00283E29 /* Model.xcdatamodel */,
+			);
+			currentVersion = CF5CA7042AA0A90A00283E29 /* Model.xcdatamodel */;
+			path = GoalieModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF0251A62A997F7A00DB8F9E /* Project object */;
 }

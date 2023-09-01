@@ -31,19 +31,33 @@ class DataController: ObservableObject {
     }
     
     //func add game data with goalie name
-    func addFood(name: String, shots: Int64, goals: Int64, savePCT:Float, context: NSManagedObjectContext){
-        let game = GoalieModel(context: context)
+    func addGame(name: String, shots: Double, goals: Double, savePct:Float, seasonGoals: Double, seasonShots: Double, seasonSavePct: Float, context: NSManagedObjectContext){
+        let game = Goalie(context: context)
         game.id = UUID()
         game.date = Date()
         game.name = name
         game.shots = shots
         game.goals = goals
-        game.savePct = savePCT
+        game.savePct = savePct
+        game.seasonGoals = seasonGoals
+        game.seasonShots = seasonShots
+        game.seasonSavePct = seasonSavePct
         
         save(context: context)
     }
     
-    
+    func editGame(game: Goalie, name: String, shots: Double, goals: Double, savePct: Float, seasonGoals: Double, seasonShots: Double, seasonSavePct: Float, context: NSManagedObjectContext) {
+        game.date = Date()
+        game.name = name
+        game.shots = shots
+        game.goals = goals
+        game.savePct = savePct
+        game.seasonGoals = seasonGoals
+        game.seasonShots = seasonShots
+        game.seasonSavePct = seasonSavePct
+        
+        save(context: context)
+    }
     
     
 }

@@ -9,9 +9,17 @@ import SwiftUI
 
 struct GameView: View {
     
-    @State var Shots: Float = 0
-    @State var Goals: Float = 0
+    @Environment(\.managedObjectContext) var managedObjContext
+    @Environment(\.dismiss) var dismiss
+    
+    @State var Shots: Double = 0
+    @State var Goals: Double = 0
     @State var SavePct: Float = 100.00
+    @State var name: String = ""
+    @State var seasonShots: Double = 0
+    @State var seasonGoals: Double = 0
+    @State var seasonSavePct: Float = 0.00
+   
     
     var body: some View {
         ZStack{
@@ -104,10 +112,23 @@ struct GameView: View {
                 
                 Spacer()
                 
-                Button("Reset") {
-                    Reset()                }.buttonStyle(BorderedProminentButtonStyle())
-                    .foregroundColor(.white)
-                    .font(.headline)
+                HStack{
+                    Spacer()
+                    Button("Reset") {
+                        Reset()                }.buttonStyle(BorderedProminentButtonStyle())
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    Spacer()
+                    Button("Submit") {
+                        DataController().addGame(name: name, shots: Shots, goals: Goals, savePct: SavePct, seasonGoals: seasonGoals, seasonShots: seasonShots, seasonSavePct: seasonSavePct,context: managedObjContext)
+                        dismiss()
+                        
+                    }.buttonStyle(BorderedProminentButtonStyle())
+                        .foregroundColor(.white)
+                        .font(.headline)
+                    
+                    Spacer()
+                }
                 
             }
            
@@ -120,8 +141,8 @@ struct GameView: View {
     }
     
     func Reset() {
-        Goals = 0.00
-        Shots = 0.00
+        Goals = 0
+        Shots = 0
         SavePct = 100.00
     }
 

@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct CreateGoalieView: View {
+    @Environment(\.managedObjectContext) var managedObjContext
     
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var game:FetchedResults<Goalie>
+    
+    @State private var showingAddView = false
     
     var body: some View {
         
-        NavigationView{
 
                 VStack{
+                    Spacer()
                     Image("Logo")
                         .resizable()
                         .frame(width: 125.0, height: 125.0)
@@ -23,17 +28,9 @@ struct CreateGoalieView: View {
                         .foregroundColor(.white)
                         .font(.title)
                     Spacer()
-                    
-                    NavigationLink(destination: GameView()) {
-                        Text("New Game")
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .font(.title)
-                        .foregroundColor(.white)
-                        .padding(.bottom, 400)
-                    }
                 }.background(Image("background"))
         }
-    }
+    
     
     
     

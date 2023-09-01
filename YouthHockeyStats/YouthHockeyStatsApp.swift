@@ -13,7 +13,7 @@ struct YouthHockeyStatsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CreateGoalieView()
+            StatsTabView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

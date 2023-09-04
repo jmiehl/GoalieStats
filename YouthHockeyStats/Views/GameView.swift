@@ -85,9 +85,8 @@ struct GameView: View {
                     }.buttonStyle(BorderedProminentButtonStyle()).foregroundColor(.white)
                         .font(.largeTitle)
                     Spacer()
-                }
-                
-                Spacer()
+                }.padding(.bottom, 30)
+
                 
                 HStack{
                     Spacer()
@@ -111,15 +110,37 @@ struct GameView: View {
                 }
                 
                 Spacer()
+              /*
+                TextField(
+                  "Enter Goalie, hit return",
+                  text: $name,
+                  onCommit: {
+                    name = name
+                          
+                  }
+                )
+                .textFieldStyle(.roundedBorder)
+                .background(Color .blue)
+                .padding()
+                */
+                
                 
                 HStack{
                     Spacer()
-                    Button("Reset") {
+                    
+                    Button("Reset Game") {
                         Reset()                }.buttonStyle(BorderedProminentButtonStyle())
                         .foregroundColor(.white)
                         .font(.headline)
+                    
                     Spacer()
-                    Button("Submit") {
+                    
+                    Button("Submit Game") {
+                        
+                        seasonGoals = seasonGoals + Goals
+                        seasonShots = seasonShots + Shots
+                        seasonSavePct = Float((seasonShots - seasonGoals) / seasonShots) * 100
+                        
                         DataController().addGame(name: name, shots: Shots, goals: Goals, savePct: SavePct, seasonGoals: seasonGoals, seasonShots: seasonShots, seasonSavePct: seasonSavePct,context: managedObjContext)
                         dismiss()
                         
@@ -129,6 +150,7 @@ struct GameView: View {
                     
                     Spacer()
                 }
+                .padding(.bottom)
                 
             }
            
@@ -144,7 +166,10 @@ struct GameView: View {
         Goals = 0
         Shots = 0
         SavePct = 100.00
+
     }
+    
+
 
 }
 

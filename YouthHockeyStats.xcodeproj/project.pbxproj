@@ -16,6 +16,7 @@
 		CF5CA7092AA14B1600283E29 /* SavedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7082AA14B1600283E29 /* SavedGameView.swift */; };
 		CF5CA70D2AA1585900283E29 /* StatsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA70C2AA1585900283E29 /* StatsTabView.swift */; };
 		CF5CA70F2AA1652C00283E29 /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA70E2AA1652C00283E29 /* OpeningView.swift */; };
+		CF5CA7112AA28DC600283E29 /* SeasonStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CA7102AA28DC600283E29 /* SeasonStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CF5CA7082AA14B1600283E29 /* SavedGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedGameView.swift; sourceTree = "<group>"; };
 		CF5CA70C2AA1585900283E29 /* StatsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTabView.swift; sourceTree = "<group>"; };
 		CF5CA70E2AA1652C00283E29 /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
+		CF5CA7102AA28DC600283E29 /* SeasonStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				CF5CA70E2AA1652C00283E29 /* OpeningView.swift */,
 				CF0251B32A997F7A00DB8F9E /* GameView.swift */,
 				CF5CA7082AA14B1600283E29 /* SavedGameView.swift */,
+				CF5CA7102AA28DC600283E29 /* SeasonStats.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				CF0251B42A997F7A00DB8F9E /* GameView.swift in Sources */,
 				CF5CA7092AA14B1600283E29 /* SavedGameView.swift in Sources */,
 				CF0251B22A997F7A00DB8F9E /* YouthHockeyStatsApp.swift in Sources */,
+				CF5CA7112AA28DC600283E29 /* SeasonStats.swift in Sources */,
 				CF5CA70F2AA1652C00283E29 /* OpeningView.swift in Sources */,
 				CF5CA7052AA0A90A00283E29 /* Goalie.xcdatamodeld in Sources */,
 				CF5CA70D2AA1585900283E29 /* StatsTabView.swift in Sources */,

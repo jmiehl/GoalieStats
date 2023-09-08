@@ -39,6 +39,7 @@ struct SavedGameView: View {
                             
                         }
                         Spacer()
+                        
                     }
                 }
             

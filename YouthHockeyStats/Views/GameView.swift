@@ -12,6 +12,7 @@ struct GameView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismiss
     
+    
     @State var Shots: Double = 0
     @State var Goals: Double = 0
     @State var SavePct: Float = 100.00
@@ -39,6 +40,8 @@ struct GameView: View {
                     Text(String(format:"%.0f",Shots))
                         .font(.largeTitle)
                 }.foregroundColor(.white)
+                    .padding([.leading,.trailing])
+                    
                 
                 HStack{
                     // Goals Text
@@ -51,6 +54,7 @@ struct GameView: View {
                         .font(.largeTitle)
 
                 }.foregroundColor(.white)
+                    .padding([.leading,.trailing])
                 
                 HStack{
                     // Save Pct Text
@@ -62,7 +66,7 @@ struct GameView: View {
                     Text(String(format: "%.1f",SavePct))
                         .font(.largeTitle)
                 }.foregroundColor(.white)
-                
+                    .padding([.leading, .trailing])
                 Spacer()
                 
                 // Shot buttons
@@ -110,6 +114,11 @@ struct GameView: View {
                 }
                 
                 Spacer()
+
+                
+                
+                
+                
               /*
                 TextField(
                   "Enter Goalie, hit return",
@@ -168,6 +177,9 @@ struct GameView: View {
         SavePct = 100.00
 
     }
+    
+    
+
     
 
 
